@@ -1,0 +1,424 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+.bold  {
+  font-weight: 800;
+}
+html {
+  height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.mainWrapper > * , .navbar {
+    border: 1px solid black;
+    background-color: #d5d5d5;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.navContainer {
+  position: fixed;
+  width: 100%;
+  display: inline-block;
+  z-index: 10;
+}
+
+
+.mainWrapper {
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav"
+     "header header header"
+    "leftSide main rightSide"
+    "footer footer footer";
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 100px 125px 1fr 200px;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+}
+.navbar {
+  background-color: black;
+}
+
+.navBarImgCont {
+  display: inline-block;
+  position: relative;
+  left: 15px;
+  height: 65px;
+  width: 65px;
+}
+
+.navBarImgCont a {
+  height: 100%;
+  width:100%;
+}
+
+.navBarImgCont img {
+
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.navBarImgCont img {
+
+    background-size: cover;
+}
+
+#navbar {
+    grid-area: nav;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+display: flex;
+}
+.logo {
+display: inline-block;
+}
+
+.navLinks {
+list-style: none;
+}
+
+.navItem a {
+display: inline-block;
+padding: .35em;
+font-size: 1.5em;
+text-decoration: none;
+color: white;
+}
+
+.navItem:hover {
+background-color: white;
+border-radius: 10px;
+}
+
+.navItem:hover a {
+color: skyblue;
+}
+
+.logo img { 
+width: 175px;
+vertical-align: middle;
+}
+
+
+#mainHeader {
+    grid-area: header;
+    text-align: start;
+}
+
+#mainHeader h2 {
+    font-size: 2rem;
+    color: black;
+    font-weight: 400;
+    padding-left: 25px;
+    margin: 0 0 10px 0;
+}
+
+#mainHeader h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: rgb(77, 77, 77);
+    padding: 0 0 10px 0;
+    margin: 15px 30px;
+}
+
+#mainGrid, #leftSide, #rightSide {
+  max-height: 750px;
+}
+
+#leftSide, #rightSide {
+  /*max-width: 250px;*/
+}
+#mainGrid {
+    grid-area: main;
+    height: 100vw;
+    width: auto;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+}
+
+.el1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.el2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.el3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+ 
+}
+.el4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.el5 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+
+#mainGrid h2 {
+  position: absolute;
+  top:1rem;
+  left: 1rem;
+}
+
+#mainGrid h3 {
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  color:  	rgb(53, 52, 52);
+}
+
+#mainGrid .cont {
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+ 
+#mainGrid .img {
+
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-size: cover; /* widht is auto adjust to maintain aspect ration */
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+#mainGrid .img:hover {
+  cursor: pointer;
+}
+
+.img1 {
+  background: url('./assets/city-skyline.jpg');
+}
+
+.img1:hover {
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/city-skyline.jpg');
+}
+
+.img2 {
+  background: url('./assets/cn-tower.jpg');
+}
+
+.img2:hover {
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/cn-tower.jpg');
+}
+
+.img3 {
+  background: url('./assets/rogers-center.jpg');
+}
+
+.img3:hover {
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/rogers-center.jpg');
+}
+
+.img4 {
+  background: url('./assets/old-city-hall.jpg');
+}
+
+.img4:hover{
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/old-city-hall.jpg');
+}
+
+.img5 {
+  background: url('./assets/new-city-hall.jpg');
+}
+
+.img5:hover{
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/new-city-hall.jpg');
+}
+
+.img6 {
+  background:url('./assets/rom.jpg');
+}
+
+.img6:hover{
+  background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%),
+  url('./assets/rom.jpg');
+}
+
+#leftSide {
+  grid-area: leftSide;
+  overflow-y: scroll;
+}
+
+#leftSide .cardLeft {
+  background: relative;
+  max-width: 100%;
+  background: white;
+  padding: 5px;
+  text-align: center;
+  margin: 30px auto;/* ensures that positioned 
+  correctly*/
+  border-radius: 10px;
+}
+
+#leftSide .cardLeft:hover {
+
+  background: lightgray;
+  cursor: pointer;
+}
+
+#leftSide > h3 {
+  margin: 15px 10px 5px 5px;
+  font-size: 1.25rem;
+  padding: 0;
+  text-align: center;
+ /* color: rgb(28, 25, 160);*/
+ color: black;
+}
+
+#leftSide > p {
+  margin: 5px;
+  display:inline-block;
+}
+#leftSide > .leftMainContent {
+  font-size: 1em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#leftSide > .leftMainContent::first-letter {
+  font-size: 2em;
+  color: rgb(41, 108, 134);
+}
+
+#leftSide > .leftDateContent {
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+
+#rightSide {
+    grid-area: rightSide;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.cardRight {
+  background: relative;
+  max-width: 100%;
+  background: white;
+  padding: 5px;
+  text-align: center;
+  margin: 30px auto;/* ensures that positioned 
+  correctly*/
+  border-radius: 10px;
+}
+
+.cardRight img {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-size: cover; /* widht is auto adjust to maintain aspect ration */
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.cardRight .content {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  display: block;
+}
+
+.cardRight .btn {
+  display: block;
+  background-color: lightskyblue;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 1.5em;
+}
+
+.cardRight .btn:hover {
+
+  background-color: lightgray;
+  cursor: pointer;
+}
+#mainFooter {
+    grid-area: footer;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainFooter .fab {
+  font-size: 2.5em;
+  color: rgb(77, 76, 76);
+  padding: 0 15px;
+}
+
+#mainFooter .fab:hover {
+  color: white;
+}
+
+
+#mainFooter .footerList {
+    display: flex;
+}
+
+.footerList > li {
+  list-style-type: none;
+  padding: 0 15px;
+}
+.footerList li > a {
+  color: rgb(77, 76, 76);
+  font-size: 1.5em;
+  text-decoration: none;
+} 
+
+.footerList li > a:hover {
+ 
+  color: white;
+}
+
